@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Strings</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let nome = 'vitor souza gomes'
+    let receita= "ovo,farina,leite,oleo"
+
+
+    let resultado = nome.indexOf('gomes') // indexOf = busca o conteudo na variavel,caso não encontre nada, retorna -1
+    console.log(resultado)
+    console.log(nome.length) //Informa o quantidade de caracteres da variavel
+
+    let resultado2 = nome.slice(0,10) //vai exibir os valores da posição 0 a posição 10 nesse caso
+    let resultado3 = nome.substr(3,10) //primeiro numero valor inicial, segundo numero quantidade de caracteres que desejo
+    console.log(resultado2)
+    console.log(resultado3)
+
+    let resultado4 = nome.replace('gomes','souza') //pesquisa 'gomes', substitui por 'souza'
+    console.log(resultado4)
+
+    let resultado5 = nome.toUpperCase() //converte tudo para MAIUSCULA
+    console.log(resultado5)
+
+    let resultado6 = nome.toLowerCase()//converte tudo para minuscula
+    console.log(resultado6)
+
+    let resultado7 = nome.trim() //tirar excesso de espaços no conteudo
+    
+    let resultado8 = nome.charAt(3)//qual o caracter na posição 3
+    //let resultado8 = nome[3] // a mesma coisa que a função de cima.
+    console.log(resultado8)
+
+    let resultado9 = nome.split(' ')//quebra o conteudo em um array, nesse caso usando o espaço
+    let resultado10 = receita.split(',')
+    console.log(resultado9)
+    console.log(resultado10)
+
+</script>
+</html>

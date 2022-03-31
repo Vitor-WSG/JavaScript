@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script></script>
+    <title>Conceitos</title>
+</head>
+
+<body>
+    <div id="exemplo">VITOR GOMES</div>
+
+    <div class="lista">
+        Arroz, feijao, macarrao
+    </div>
+    <div class="lista">
+        frango,boi,porco
+    </div>
+    <button value="enviar">enviar</button>
+    <script>
+        //document.getElementById('exemplo').innerHTML='JOAO DA SILVA'
+        //document.getElementsByClassName('lista')[0].innerHTML='item alterado' //Altera somente o primeiro item que tem essa classe
+        //document.getElementsByClassName('lista')[1].innerHTML='item alterado 2' //Altera o segundo item que tem essa classe
+        //document.getElementsByTagName('button')[0].innerHTML ='BOTAO 2'
+
+        document.querySelector('#exemplo').innerHTML="Alterado via query"
+        //document.querySelector('.lista').innerHTML="Alterada a classe via querySelector" //Altera somente o primero item que achar
+        document.querySelector('.lista').innerHTML="Alterada a classe via querySelector"
+    </script>
+</body>
+</html>

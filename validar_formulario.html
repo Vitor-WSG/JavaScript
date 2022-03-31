@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Formulario</title>
+    <script>
+        function validar(){
+            var valor= document.getElementById("numero").value;
+            if (valor.length > 2){
+                alert("Valor informado deve ter maximo 2 digitos")
+                return false;                
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validar()">
+        Digite um numero de 2 algorismos
+        <br><br><input type="text" id="numero"> <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

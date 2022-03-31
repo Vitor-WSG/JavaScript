@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script>
+        var lista = ['Arroz','Feijao','Macarrao','Carne',20]
+        var lista2 = ['panela','forno','colher']
+        var junto = lista.concat(lista2) //junta a lista com a lista2
+
+       // alert(lista)//Mostra todos os itens da lista
+       // alert(lista[3])//Mostra apenas o item 3 da lista
+       // alert(lista.length) //Mostra o tamanho da lista
+
+       /* alert(lista.indexOf("Arroz")) //Procura este item na lista, quando nao acha retorna -1
+       if (lista.indexOf("Feijao") >-1 ){ //Coloque > -1 para posição de itens 0, pos 0 em javascript é NÃO.
+           alert("Tem na lista")
+       } 
+       else {
+        alert("Não tem na lista")
+       }*/
+
+       // alert(lista.toString)//transfora o array em uma string
+       // let resultado9 = nome.split(' ')//converte o conteudo em um array, nesse caso usando o
+       // alert(lista.join("/")) //separa os itens por /
+       // alert(lista.pop()) //Mostra e remove o ultimo item da lista
+       // alert(lista.shift()) //Mostra e remove o primeiro item da lista
+       // alert(lista.splice(2,1)) // Remove itens do array, (QUAL ITEM, QUANTOS ITEM)
+       // alert(lista.push("teste")) // Adiciona esse item na lista
+       // alert (lista.sort()) // Mostra a lista em ordem alfabetica
+       // alert (lista.reverse())// Mostra lista em ordem invertida
+       // lista[4]='Novo item' //caso exista item nessa posição será substituido, caso nao exista sera adicionado
+       // alert(lista)    
+       
+       //.MAP
+       //funcao .map passa por cada item do array e aplica a função
+       var lista3 = [10,30,40,50,60]
+       var listaMAP = lista3.map(function (item){
+           return item*2
+       })
+       console.log(listaMAP)
+       
+
+       //.FILTER
+        //função .filter filtra os itens do array para aplica a função
+       var listaFILTER = lista3.filter(function (item){
+           return (item <50)? true:false
+       }) 
+       console.log(listaFILTER)
+      
+
+       //.EVERY
+       //função .every verifica se TODOS os items atende a condição
+       var listaEVERY = lista3.every(function(item){
+           return (item > 50 )? true:false
+       })
+       console.log(listaEVERY)
+       
+
+       //.SOME
+       //função .some verifica se existe ALGUM item que atende a condição
+       var listaSOME = lista3.some(function(item){
+           return (item > 60) ? true:false
+       })
+       console.log(listaSOME)
+       
+
+       //.FIND
+       //.findIndex retorna somente a posição no array
+       //funcao .find procura no array atendendo a condição e retorna o array
+       var nomes = [
+           {id:1, nome:'joao', sobrenome:'silva'},
+           {id:2, nome:'maria', sobrenome:'gomes'},
+           {id:3, nome:'jose', sobrenome:'oliveira'}
+       ]
+       var listaFIND = nomes.find(function(item){
+           return (item.sobrenome =='oliveira')? true:false
+       })
+       console.log(listaFIND)
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

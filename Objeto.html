@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+</head>
+<script>
+    //OBJETO
+    function Animal(){
+    this.raca="chow-chow";
+    this.nome="teo";
+    this.idade=2;
+    this.peso=40;
+
+    //ACAO-METODO
+    this.fazerxixi = function(){
+        console.log("xiiiiii...")
+    }
+    //Função auxiliar, chama outra função para execução, nesse caso a função mastigar
+    this.comer = function(kg){
+        for(i=0;i<=kg;i++){
+            this.mastigar(i)
+        }
+        console.log("humm...")
+        this.peso=this.peso+(kg/2)
+    }
+
+
+    this.mastigar = function(i){
+        console.log(i+" - nhoc")
+    }
+}
+
+
+var teo = new Animal();
+teo.raca = "Gato"
+teo.nome = "Teo"
+
+var xuxu = new Animal();
+xuxu.raca = "cao"
+xuxu.nome = "Xuxu"
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <script>
+        function Adicionar(){
+            var itens = document.getElementById('itens').value; //pega o valor inserido no input
+            var listahtml = document.getElementById('lista').innerHTML; 
+            listahtml = listahtml+ "<li>"+itens+"</li>" // variavel lista
+            document.getElementById('lista').innerHTML=listahtml;
+            document.getElementById('itens').value = "" //limpa a lista depois de inserida
+            document.getElementById('itens').focus() //volta o cursor do mouse para o input
+        }
+    </script>
+</head>
+<body>
+    <h3>Lista de compras</h3>
+    <input type="text" id="itens">
+    <button onclick="Adicionar()">Adicionar</button>
+    <br>
+    <ul id="lista"></ul>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando classes</title>
+    <script>
+        function verde(){
+            document.querySelector('#exemplo').classList.remove('vermelho')//remove a classe informada
+            document.querySelector('#exemplo').classList.remove('azul')//remove a classe informada
+            document.querySelector('#exemplo').classList.add('verde') //adiciona uma classe que ja existe no elemento selecionado
+        }
+        function azul(){
+            document.querySelector('#exemplo').classList.remove('vermelho')//remove a classe informada
+            document.querySelector('#exemplo').classList.remove('verde')//remove a classe informada
+            document.querySelector("#exemplo").classList.add('azul')//adiciona uma classe que ja existe no elemento selecionado
+        }
+        function vermelho(){
+            document.querySelector('#exemplo').classList.remove('verde')//remove a classe informada
+            document.querySelector('#exemplo').classList.remove('azul')//remove a classe informada
+            document.querySelector('#exemplo').classList.add('vermelho')//adiciona uma classe que ja existe no elemento selecionado
+        }
+
+        //EXEMPLO 2, FUNÇÃO TROCAR DE COR
+        function trocar(){
+            //Essa linha verifica se o item selecionario tem a classe 'preto'
+            if(document.querySelector('#exemplo2').classList.contains('preto')){
+                //caso ele tenha essa classe, remova e adicione essa outra classe
+                document.querySelector('#exemplo2').classList.remove('preto')
+                document.querySelector('#exemplo2').classList.add('amarelo')
+            }
+            else{
+                document.querySelector('#exemplo2').classList.remove('amarelo')
+                document.querySelector('#exemplo2').classList.add('preto')
+            }
+        }
+
+    </script>
+    <style>
+        #exemplo2{
+            width: 50px;
+            height: 50px;
+            padding: 50px;
+            margin: 50px;
+            border: 2px solid black;
+            color: white;
+        }
+        #exemplo{
+            width: 50px;
+            height: 50px;
+            padding: 50px;
+            margin: 50px;
+            border: 2px solid black;
+        }
+        .amarelo{
+            background-color: yellow;
+            color: black !important;
+            text-align: center;;
+        }
+        .preto{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .verde{
+            background-color: green;
+            color: black;
+            text-align: center;;
+        }
+        .vermelho{
+            background-color: red;
+            color: black;
+            text-align: center;;
+        }
+        .azul{
+            background-color: blue;
+            color: white;
+            text-align: center;
+            border: 2px solid white !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="exemplo">EXEMPLO</div>
+    <button onclick="verde()">VERDE</button>
+    <button onclick="azul()">AZUL</button>
+    <button onclick="vermelho()">VERMELHO</button>
+    <br><br><br>
+
+    <div id="exemplo2" class="preto">EXEMPLO2</div>
+    <button onclick="trocar()">TROCAR</button>
+</body>
+</html>

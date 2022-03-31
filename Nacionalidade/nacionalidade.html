@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <div id="corpo">
+        <h1>Sistema de Nacionalidade</h1>
+        Informe o seu pais <input type="text" nome="nac" id="nac" autofocus placeholder=" Digite aqui ...">
+        <input type="button" value="Verficar" onclick="verificar()">
+        <p id="res">Resultado...</p>
+
+        <script>
+            function verificar(){
+                var nac=document.querySelector("#nac")
+                var res=document.querySelector("#res")
+                var corpo=document.querySelector("corpo")
+                var nacio=String(nac.value)
+                res.innerHTML=`Seu pais e <strong>${nacio.toUpperCase()}</strong>`
+
+                switch (nacio) {
+                    case `Brasil`:
+                    res.innerHTML= "Bem vindo. Voce e Brasileiro"
+                    break;
+                    case `ESTADOS UNIDOS`:
+                    res.innerHTML="Well Come. You are American"
+                    document.querySelector("#corpo").style.background='blue'
+                    document.querySelector('#corpo').style.color='white'
+                    
+                    break;
+                    case `Espanha`:
+                    res.innerHTML='Bien Venido. Ustede es Espanhol'
+                    document.querySelector("#corpo").style.background='red'
+                    document.querySelector("#corpo").style.color='white'
+                    break;
+                    case `Italia`:
+                    res.innerHTML=`Bien Venuto. Tu sei Italiano`
+                    document.querySelector("#corpo").style.background='green'
+                    document.querySelector('#corpo').style.color='white'
+                    break;
+                    default:
+                    alert('Nao encontramos sua Nacionalidade')
+                }
+
+               
+            }
+        </script>
+
+    </div>
+    
+</body>
+</html>

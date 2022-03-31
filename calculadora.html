@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+        function soma(){
+        //parseInt()serve para transformar o conteudo em numero podendo usar tambem Number()
+        var valor1 = Number(document.getElementById('valor1').value); 
+        var valor2 = Number(document.getElementById('valor2').value);
+        var result = valor1 + valor2;
+        alert(result)
+        document.getElementById('valor1').value ="" //limpar o input
+        document.getElementById('valor1').focus() //voltar o cursos do mouse para o input
+        document.getElementById('valor2').value ="" //limpar o input
+        }
+    </script>
+</head>
+<body>
+    <input type="number" name="" id="valor1">
+    +
+    <input type="number" name="" id="valor2">
+    <button onclick="soma()">Resultado</button>
+</body>
+</html>

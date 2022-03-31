@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+</head>
+<body>
+<div>
+    <h1>Sistema de velocidade</h1>
+    <p>Informe sua velocidade</p> 
+    <input type="number" name="vel" id="vel">Km/h
+    <input type="button" value="VERIFICA" onclick="verifica()">
+    <input type="button" value="LIMPAR" onclick="limpar()">
+    <p id="res">Resultado</p>
+    <p id="avi">Aviso</p>
+    <p id="dica">DICA</p>
+</div>
+
+    <script>
+        function verifica()
+        {
+                var vel=document.querySelector("#vel")
+                var res=document.querySelector("#res")
+                var aviso=document.querySelector("#avi")
+                var dica=document.querySelector("#dica")
+                var velo= Number(vel.value)           
+                res.innerHTML=`Sua velocidade e <strong>${velo}Km/h</strong>`
+
+                if( velo < 60){
+                aviso.innerHTML="<strong>Voce esta abaixo da velocidade da via</strong>"
+                aviso.sytel.color="red"
+                dica.innerHTML="Tente ficar mander sempre a velocidade da via"
+                window.alert("abaixo da via")
+                }
+
+
+                else if (velo > 100){
+                aviso.innerHTML="<strong>Voce foi multado por excesso de velocidade</strong>"
+                aviso.style.color="red"
+                dica.innerHTML="Use sempre o cinto de segurança"
+                }   
+            
+                else {
+                aviso.innerHTML="<strong>Diriga com cuidado, respeite o transito</strong>"
+                aviso.style.color="white"
+                dica.innerHTML="Seja um exemplo"
+                }
+        }
+        function limpar()
+        {
+            if (document.getElementById("#vel").value!=" ")
+            {
+                vel.innerHTML=" "
+                /* document.getElementById("#vel").value=" "; */
+            }
+           
+        }
+
+    </script>
+
+</body>
+</html>

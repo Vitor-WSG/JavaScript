@@ -1,0 +1,25 @@
+div{
+    background:rgb(2, 2, 112);
+    color: white;
+    margin: auto;
+    margin-right: 200px;
+    font-size: larger;
+    font-weight: bold;
+    padding: 100px 100px ;
+}
+
+div h1 {
+    text-align: center;
+}
+#dica,
+#res, 
+#avi{
+    text-align: center;
+}
+#vel{
+    border-radius: 10px;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    font-size: 20px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estourar Bolinhas</title>
+    <style>
+        .bola{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 25px;
+            position: absolute;
+        }
+    </style>
+
+    <script>
+        function addBola(){
+            var bola=document.createElement("div") // processo para criar uma div no HTML
+            bola.setAttribute("class","bola") // atribui a classe bola na div
+            /* Basicamente estamos fazendo isso: <div class="bola"></div>*/
+
+            //Math.floor - PEga os numeros gerados e converte para numeros inteiros
+            //Math.random - gera numeros aleatorios, multipliaca por 500 para ter numeros de 0 a 500
+            var posicao1 = Math.floor(Math.random()*500) //posição de largura
+            var posicao2 = Math.floor(Math.random()*400) //posição de altura
+
+            bola.setAttribute("style","left:"+posicao1+"px;top:"+posicao2+"px;")
+            bola.setAttribute("onclick","estourar(this)")
+            //adicionando o evento de onclick com a funçao estourar
+            //criando uma classe com esse style
+            //<div style="left:123213;top:87987"></div
+
+            document.body.appendChild(bola);
+            //pega o conteudo ja esta no site e adiciona esses elementos novos
+
+            var box = document.getElementsByClassName('bola');
+            var background = ["#f36", "#C3C", "#fc0", "#FC6", "#9C0", "#363636", "#000", "#000080", "#006400", "#8B4513", "#4B0082"];
+            cor = 0;
+            div = 0;
+            setInterval(function() {
+                box.item(div).style.backgroundColor = background[cor];
+                cor++;
+                div++;
+                if (cor >= background.length) {
+                    cor = 0;
+                }
+                if (div >= box.length) {
+                    div = 0;
+                }
+            }, 1000)
+        }
+        function estourar(objeto){
+            document.body.removeChild(objeto);
+            //processo para remover todo o elemento adicionado
+        }
+        function iniciar(){
+            setInterval(addBola,1000)
+            //intervalo para adicioar a função addBola a cada 1000milisegundos, ou 1 segundo
+        }
+    </script>
+</head>
+<body onload="iniciar()">
+</body>
+</html>

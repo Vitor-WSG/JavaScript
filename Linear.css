@@ -1,0 +1,46 @@
+.fundo{
+    background-color:rgba(0, 0, 0, 0.5) ;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease .5s;
+}
+.usuarios{
+    display: flex;
+    justify-content: space-evenly;
+}
+.detalhes{
+    padding: 10px;
+    border: 3px solid black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: whitesmoke;
+    display: none;
+}
+.detalhes-content{
+    display: flex;
+    flex-direction: column;
+}
+.detalTitle{
+    font-weight: bold;
+}
+.newUsers{
+    height: 200px;
+    width: 300px;
+    margin: auto;
+    padding-top: 50px;
+    border: 3px solid black;
+    display: none;
+    position:relative;
+    text-align: center;
+    background-color: white;
+}
+.newUsersDate{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}

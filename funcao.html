@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        function AlteraTexto(){ //Função SEM PARAMETROS
+        var area=document.getElementById('area')
+        var texto=prompt('Qual seu nome - função')
+        area.innerHTML = texto
+        }
+        function AlteraTextoParametros(nome,idade){ //Função COM PARAMETROS
+        var area=document.getElementById('area2')
+        var texto=prompt('Qual seu sobrenome')
+        area2.innerHTML = nome+" "+texto+" tem "+idade;
+        }
+        function somar (x,y){
+            let total=x+y
+
+            return total
+        }
+        document.querySelector('resultado').innerHTML=total
+    </script>
+
+</head>
+<body>
+    <div id="area">Texto alterado</div>
+    <div id="area2"> Dados completo</div>
+    <br><br>
+    <!-- Inserido alteraçã direto o arquivo-->
+    <button onclick="document.getElementById('area').innerHTML=prompt('Qual seu nome - direta ')">Fazer a ação direta</button>
+
+    <!-- Inserido alteraçã por meio de uma função-->
+    <button onclick="AlteraTexto()">Fazer a ação função</button>
+
+    <!-- Inserido alteraçã por meio de uma função com parametros-->
+    <button onclick="AlteraTextoParametros('Vitor', 30)">Altera Texto Parametros</button>
+
+    <!-- O comando this. aplica para o próprio elemento-->
+    <button onclick="this.innerHTML=prompt('Qual o nome do botão?')">Fazer a ação proprio botao</button>
+
+    <button onclick="somar(3,5)">RESULTADO</button>
+    <div id="resultado"></div>
+</body>
+</html>

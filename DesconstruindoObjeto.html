@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconstruindo objetos</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let pessoa = {
+        nome:'Vitor',
+        sobrenome:'Gomes',
+        idade:30,
+        social: {
+            facebook:'vitorg',
+            instagram:'vitorgomes'
+        },
+        nomeCompleto: function(){
+            return `${this.nome} ${this.sobrenome}`
+        }
+    }
+    
+    /* Maneira de extrair os dados do objeto pessoa:*/
+    let nome = pessoa.nome
+    let sobrenome = pessoa.sobrenome
+    let idade = pessoa.idade
+    let social = pessoa.social.facebook
+    console.log(`${nome} ${sobrenome} ${idade} ${social}`)
+    
+
+    /* Maneira moderna de extrair os mesmos dados. Crio a variavel, informo os dados do objeto
+    depois seleciono qual o objeto desejo extrair nesse caso: pessoa 
+    Esses dados irão virar variáveis*/
+    let {nome, sobrenome, idade} = pessoa
+    console.log(nome,sobrenome,idade)
+
+    /* Nesse modelo eu atribuo novos nomes as variaveis do objeto*/
+    let {nome:NovoNome, sobrenome:NovoSobrenome, idade:NovaIdade} = pessoa
+    console.log(NovoNome,NovoSobrenome,NovaIdade)
+
+    
+    /* Nesse caso como a variavel sexo não existe no objeto, eu estou definindo
+    manualmente, ou seja, quando não tiver algo definido no objeto posso incluir,
+    caso seja definido no objeto ele pegara o valor do objeto*/
+    let {nome, sobrenome, idade, sexo='M'} = pessoa
+    console.log(nome,sobrenome,idade,sexo)
+
+    /* Dessa maneira e pego as informaçoes do objeto dentro do objeto*/
+    let {facebook,instagram} = pessoa.social
+    console.log(facebook,instagram)
+
+
+    /* Dessa maneira e pego as informaçoes do objeto dentro do objeto, e as outras informaçoes 
+    do objeto princial*/
+    let {nome, sobrenome, social: {instagram} }= pessoa
+    console.log(nome, sobrenome,instagram)
+
+    console.log(pessoa.nomeCompleto()) //exibe nome completo da pessoa, baseada na função.
+</script>}
+</html>

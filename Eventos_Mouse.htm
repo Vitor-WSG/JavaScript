@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <script>
+        function cliquedown(){
+            console.log('Clicou o mouse');
+        }
+        function cliqueup(){
+            console.log('Soltou o mouse');
+        }
+        function mouseover(){
+            console.log('Mouse em cima')
+        }
+        function mouseout(){
+            console.log('Mouse fora')
+        }
+        function mousemove(){
+            console.log('Mouse mechendo')
+        }
+        function clique (){
+            console.log('Clique completo')
+        }
+        function btdireito(){
+            console.log('botao direito')
+        }
+        function cliqueduplo(){
+            console.log('Clique duplo')
+        }
+
+    </script>
+</head>
+<body>
+    <button onmousedown="cliquedown()" 
+            onmouseup="cliqueup()"
+            onmouseover="mouseover()"
+            onmouseout="mouseout()"
+            onmousemove="mousemove()"
+            onclick="clique()"
+            oncontextmenu="btdireito()"
+            ondblclick="cliqueduplo()"
+    > Eu sou um botão </button>
+</body>
+</html>

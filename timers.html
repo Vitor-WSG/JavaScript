@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervalos</title>
+</head>
+<body>
+    <h1>Relógio:</h1>
+    <div class="time"></div>
+    <button onclick="parar()">PARAR</button>
+    <BUTton onclick="iniciar()">INICIAR</BUTton>
+</body>
+<script>
+    let timer;
+
+    function iniciar(){
+         timer = setInterval (showtime, 1000) //execute a função shotime, a cada 1 segundo
+    }
+    function parar(){
+        clearInterval(timer)
+    }
+
+    setTimeout (function() { //executa a função apos o timer de 2 segundos
+        alert('Executou')
+    },2000)
+
+    function showtime(){
+        let d = new Date()
+
+        let hh = d.getHours()
+        let mm = d.getMinutes()
+        let ss = d.getSeconds()
+
+        //let relogio =hh+':'+mm+':'+ss;
+        let relogio = `${hh}:${mm}:${ss}`
+    
+        document.querySelector('.time').innerHTML=relogio
+    }
+    
+</script>
+</html>

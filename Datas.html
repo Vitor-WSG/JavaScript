@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let d = new Date() //Pega a data do computador
+    let d2 = new Date('2022-03-01 20:30:20') //defini uma data manual
+    let data = d.setDate(d.getDate()+5) // seta a data, pega a data atual e soma mais 5 dias
+    let data = d.setHours (d.getHours()+12) //set a hora, pega a hora atual e soma mais 12 horas
+
+    let data = d.getFullYear() // exibe somente o ano
+    let data = d.getMonth() // exibe somente o mês ( em javascript o mes começa em 0)
+    let data = d.getDate() // exibe o dia da semana
+    let data = d.getMinutes() // exibe os minutos
+    let data = d.getHours() // exibe a hora
+
+
+    // console.log( d.toUTCString())
+</script>
+</html>
