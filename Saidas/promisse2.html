@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //Utilizando promise
+    /* fetch('https://api.github.com/users/vitor-wsg')
+    .then(response=>response.json())
+    .then(data=>(data))
+    then(data=>(data.login)) */
+
+   
+   
+   //UTILIZANSO async await
+    /*  async function start(){
+        const resposta = await fetch ('https://api.github.com/users/vitor-wsg')
+        const user = await resposta.json()
+        console.log(user)
+        console.log(user.login)
+    } */
+
+    //UTILIZANSO async await com try e catch    
+    async function start2(){
+        try{
+            const resposta2 = await fetch('ht://api.github.com/users/vitor-wsg')
+            const user2 = await resposta2.json()
+            console.log(user2)
+        }
+        catch(erro){
+            console.log("erro de execução")
+        } 
+        
+    
+    }
+    //start()
+    //start2()
+    //ou
+    start2()//.catch(erro=>console.log(erro))
+</script>
+</html>
