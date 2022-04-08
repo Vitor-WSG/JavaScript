@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"></script>
+    <title>API Axios</title>
+</head>
+<body>
+    <div id="apiresult"></div>
+    <button onclick=GETUsers()>Todos os usuarios</button>
+    <hr>
+    <div>Informe ID para detalhes:</div>
+    <input type="text" name="" id="usuario">
+    <button onclick=GETUser()>GET on user</button>
+    <p id="id">ID:</p>
+    <p id="title">TITLE:</p>
+    <p id="body">BODY:</p>
+    <hr>
+    <p>Informe dados do novo usuario</p>
+    <div id="id">ID:</div> <input type="text" id="">
+    <div id="title">TITLE:</div> <input type="text" id="">
+    <div id="body">BODY:</div> <input type="text" id="">
+    <br>
+    <br>
+    <button onclick=POSTUser()>Cadastrar Novo Usuario</button>
+</body>
+</html> 

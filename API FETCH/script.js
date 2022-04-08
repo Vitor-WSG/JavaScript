@@ -1,3 +1,4 @@
+//Consumo de API com Fetch
 const url='https://jsonplaceholder.typicode.com/posts'
 
 //Retorna todos os usuarios
@@ -28,7 +29,7 @@ const newUser ={
     body:'bar',
     userId:1
 }
-function addUser(newUser){
+function addUser(){
     fetch(url,{
         method: "POST",
         body: JSON.stringify(newUser), //Transformando em texto comum
