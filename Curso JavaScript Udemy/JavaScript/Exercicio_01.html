@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio_01</title>
+  </head>
+  <body></body>
+  <script>
+    var numero1 = prompt("Informe um numero");
+    var numero2 = prompt("Informe outro numero");
+
+    //converte para tipo numero considera casas decimais
+    var resultado = Number(numero1) / Number(numero2);
+
+    // Deve inserir o parenteses para obter a media correta
+    var resultadoMedia = ( Number(numero1) + Number(numero2) ) / 2;
+
+    //outra maneira de converter para numero porem sem usar casas decimais
+    // var resultado = parseInt(numero1) + parseInt(numero2);
+
+    //outra maneira de converter para numero, usando as casas decimais
+    // var resultado = parseFloat(numero1) / parseFloat(numero2);
+
+    alert(`${resultado}`);
+
+    // retorna o tipo de variavel
+    alert(typeof resultado);
+  </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While</title>
+  </head>
+  <body></body>
+  <script>
+    //Loop While
+    var x = Number(prompt("Informe um número para obter a tabuada"));
+    var y = 1;
+
+    //Estipula condição de enquanto y for <= 10
+    // while (y <= 10) {
+    //   var resultado = `${x} * ${y} = ${x * y}</br>`;
+    //   y = y + 1; //Define condição para encerrar o programa, quando y for = 11, 10 = 10+1
+    //   document.write(resultado);
+    // }
+    // document.write("Encerrando programa");
+
+    //Loop Do While
+    var x = Number(prompt("Informe um número para obter a tabuada"));
+    var y = 11;
+
+    do { // Sera garantida a execução desse trecho do código pelo menos uma vez
+      var resultado = `${x} * ${y} = ${x * y}</br>`;
+      y = y + 1;
+      document.write(resultado);
+    } 
+    //Depois o codigo será encerrado
+    while (y <= 10);
+    document.write("Encerrando programa");
+  </script>
+</html>

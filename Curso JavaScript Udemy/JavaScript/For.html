@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For</title>
+  </head>
+  <body></body>
+
+  <script>
+    // var x = Number(prompt("Informe um numero:"));
+    // for (var i = 1; i <= 100; i++) {
+    //   var resultado = x * i
+    //   if (i % 10 == 0) {
+    //     document.write(`${x} * ${i} = ${x * i}<hr>`);
+    //   } else {
+    //     document.write(`${x} * ${i} = ${x * i}</br>`);
+    //   }
+    // }
+
+    // for (i=1004;i<2017;i+=4) {
+    //     console.log(i);
+
+    // var x = 1004
+    // while (x<=2017){
+    //     x +=4
+    //     console.log(x)
+    // }
+
+    for (i = 1000; i <= 2025; i = i + 4) {
+      if (i % 4 == 0) {
+        if ((i % 100 != 0) || (i % 400 == 0)) {
+          console.log(`${i} Bissexto`);
+        } else {
+          console.log(`${i} Não bissexto`);
+        }
+      } else {
+        console.log(`${i} Não bissexto`)
+      }
+    }
+  </script>
+</html>
